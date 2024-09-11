@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta content="initial-scale=1, maximum-scale=1,
+        user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Datatable plugin CSS file -->
+    <link rel="stylesheet" href=
+"https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+
+     <!-- jQuery library file -->
+     <script type="text/javascript" 
+     src="https://code.jquery.com/jquery-3.5.1.js">
+     </script>
+
+      <!-- Datatable plugin JS library file -->
+     <script type="text/javascript" src=
+"https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+     </script>
+</head>
+<style>
+    body{
+        font-size: 16px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+    }
+    .dataTables_wrapper .dataTables_filter {
+    float: left;
+    text-align: right;
+}
+.dataTables_wrapper .dataTables_length {
+    float: right;
+    display: none;
+}
+.dataTables_wrapper .dataTables_filter input{
+    font-size: 16px;
+    Padding-left: 12px;
+    border-radius: 4px;
+    Background-color: rgb(255, 255, 255);
+    
+    width: 241px;
+    height: 38px;
+    }
+    td,th{padding: 8px !important;
+        border: 1px solid rgb(222, 226, 230);}
+        td img{vertical-align: middle;
+    height: 30px;
+    padding-right: 10px;}
+    .dataTables_wrapper .dataTables_filter input:focus{ box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);border:1px solid #7952b3;}
+    #sindhuID{padding-top: 30px;}
+</style>
+<body>
+    <h2>Search</h2>
+
+    <!--HTML table with student data-->
+    <table id="sindhuID" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Place Name</th>
+                <th>Country</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td> 
+                <td>Chennai</td>
+                <td><img src="https://flagsapi.com/IN/shiny/64.png">India</td>
+                 
+            </tr>
+            <tr>
+                <td>2</td> 
+                <td>Ahmedabad</td>
+                <td><img src="https://flagsapi.com/IN/shiny/64.png">India</td>
+                 
+            </tr>
+            <tr>
+                <td>3</td> 
+                <td>Afghanistan</td>
+                <td><img src="https://flagsapi.com/AF/shiny/64.png">Afghanistan</td>
+                 
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Australia</td>
+                <td><img src="https://flagsapi.com/AU/shiny/64.png">Australia</td>
+                
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Silva</td>
+                <td><img src="https://flagsapi.com/BE/flat/64.png">Silva</td>
+                 
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Colombia</td>
+                <td><img src="https://flagsapi.com/CO/shiny/64.png">Colombia</td>
+                
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Australia</td>
+                <td><img src="https://flagsapi.com/AU/shiny/64.png">Australia</td>
+               
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>David</td>
+                <td><img src="https://flagsapi.com/AU/shiny/64.png">Australia</td>
+                 
+            </tr>
+            <tr>
+                <td>9</td> 
+                <td>Chennai</td>
+                <td><img src="https://flagsapi.com/IN/shiny/64.png">India</td>
+                 
+            </tr>
+           
+          
+            <tr>
+                <td>10</td>
+                <td>Silva</td>
+                <td><img src="https://flagsapi.com/BE/flat/64.png">Silva</td>
+                
+                 
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        /* Initialization of datatable */
+        $(document).ready(function() {
+            $('#sindhuID').DataTable({ 
+
+                language: { search: '', searchPlaceholder: "Search Places..." },
+                "pageLength": 5,
+                "ordering": false,
+               
+                placeholder: 'Search here'
+            
+            });
+        });
+    </script>
+</body>
+
+</html>
